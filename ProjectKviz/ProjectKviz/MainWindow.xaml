@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ComboBox x:Name="tantargy" HorizontalAlignment="Left" Margin="37,23,0,0" VerticalAlignment="Top" Width="227"/>
+        <ComboBox x:Name="temakor" Margin="338,23,227,0" VerticalAlignment="Top"/>
+        <Label x:Name="sorszam" Content="" HorizontalAlignment="Left" Margin="37,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="kerdes" Content="" HorizontalAlignment="Left" Margin="104,83,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="valaszA" Content="RadioButton" HorizontalAlignment="Left" Margin="89,154,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="valaszB" Content="RadioButton" HorizontalAlignment="Right" Margin="0,157,266,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="valaszC" Content="RadioButton" HorizontalAlignment="Left" Margin="89,0,0,180" VerticalAlignment="Bottom"/>
+        <RadioButton x:Name="valaszD" Content="RadioButton" Margin="0,0,266,177" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <Button x:Name="visszaGomb" Content="Vissza" HorizontalAlignment="Left" Margin="37,0,0,34" VerticalAlignment="Bottom" Width="75"/>
+        <Button x:Name="tovabbGomb" Content="Tovább" HorizontalAlignment="Right" Margin="0,0,125,39" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="2.472,2.09"/>
+        <Button x:Name="kiertekeles" Content="Kiértékelés" HorizontalAlignment="Right" Margin="0,0,31,39" VerticalAlignment="Bottom" Width="75"/>
     </Grid>
 </Window>
