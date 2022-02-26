@@ -103,10 +103,10 @@ namespace ProjectKviz
 
         private void TemakorCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            string temakor = temakorCB.SelectedItem.ToString();
             indit.IsEnabled = true;
-
-
+            
+            
         }
 
         private void tovabbGomb_Click(object sender, RoutedEventArgs e)
@@ -165,7 +165,6 @@ namespace ProjectKviz
 
         private void indit_Click(object sender, RoutedEventArgs e)
         {
-            string temakor = temakorCB.SelectedItem.ToString();
             while (i < kviz.Count && kviz[i].Tema != temakor)
                 i++;
             kerdes.Content = kviz[i].Kerdes;
