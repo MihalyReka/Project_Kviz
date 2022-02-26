@@ -7,17 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="tantargyCB" HorizontalAlignment="Left" Margin="37,23,0,0" VerticalAlignment="Top" Width="227" SelectionChanged="tantargyCB_SelectionChanged"/>
-        <ComboBox x:Name="temakorCB" Margin="338,23,227,0" VerticalAlignment="Top" SelectionChanged="TemakorCB_SelectionChanged"/>
-        <Label x:Name="sorszam" Content="1." HorizontalAlignment="Left" Margin="37,83,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="tantargyCB" HorizontalAlignment="Left" Margin="146,23,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="tantargyCB_SelectionChanged"/>
+        <ComboBox x:Name="temakorCB" Margin="0,23,182,0" VerticalAlignment="Top" SelectionChanged="TemakorCB_SelectionChanged" HorizontalAlignment="Right" Width="150"/>
+        <Label x:Name="sorszam" Content="" HorizontalAlignment="Left" Margin="37,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="kerdes" Content="" HorizontalAlignment="Left" Margin="89,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.587"/>
-        <RadioButton x:Name="valaszA" Content="" HorizontalAlignment="Left" Margin="89,154,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="valaszB" Content="" Margin="507,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.632,0.867" HorizontalAlignment="Left"/>
-        <RadioButton x:Name="valaszC" Content="" HorizontalAlignment="Left" Margin="89,0,0,180" VerticalAlignment="Bottom"/>
-        <RadioButton x:Name="valaszD" Content="" Margin="507,0,0,177" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button x:Name="visszaGomb" Content="Vissza" HorizontalAlignment="Left" Margin="37,0,0,34" VerticalAlignment="Bottom" Width="75" Click="visszaGomb_Click"/>
-        <Button x:Name="tovabbGomb" Content="Tovább" HorizontalAlignment="Right" Margin="0,0,125,39" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="2.472,2.09" Click="tovabbGomb_Click"/>
-        <Button x:Name="kiertekeles" Content="Kiértékelés" HorizontalAlignment="Right" Margin="0,0,31,39" VerticalAlignment="Bottom" Width="75" Click="kiertekeles_Click"/>
-        <Button x:Name="indit" Content="Teszt indítása" HorizontalAlignment="Right" Margin="0,23,50,0" VerticalAlignment="Top" Width="103" Click="indit_Click"/>
+        <RadioButton x:Name="valaszA" Content="" Margin="89,154,400,0" VerticalAlignment="Top" d:LayoutOverrides="Width"/>
+        <RadioButton x:Name="valaszB" Content="" Margin="507,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.632,0.867" HorizontalAlignment="Left" Width="275"/>
+        <RadioButton x:Name="valaszC" Content="" Margin="89,224,400,0"  VerticalAlignment="Top"/>
+        <RadioButton x:Name="valaszD" Content="" Margin="507,224,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button x:Name="visszaGomb" Content="Vissza" HorizontalAlignment="Left" Margin="37,0,0,64" VerticalAlignment="Bottom" Width="75" Click="visszaGomb_Click"/>
+        <Button x:Name="tovabbGomb" Content="Tovább" HorizontalAlignment="Right" Margin="0,0,128,59" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="2.472,2.09" Click="tovabbGomb_Click"/>
+        <Button x:Name="kiertekeles" Content="Kiértékelés" HorizontalAlignment="Right" Margin="0,0,31,59" VerticalAlignment="Bottom" Width="75" Click="kiertekeles_Click"/>
+        <Button x:Name="indit" Content="Teszt indítása" HorizontalAlignment="Right" Margin="0,25,31,0" VerticalAlignment="Top" Width="103" Click="indit_Click"/>
+        <Label Content="Tantárgy kiválasztása:" HorizontalAlignment="Left" Margin="18,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Témakör kiválasztása:" HorizontalAlignment="Left" Margin="332,19,0,0" VerticalAlignment="Top"/>
+        <StackPanel   VerticalAlignment="Bottom" Margin="117,0,240,10">
+            <Slider x:Name="helyzet" Margin="14,0,14,20" VerticalAlignment="Bottom" SmallChange="1"  ValueChanged="helyzet_ValueChanged" RenderTransformOrigin="0.469,1.333" TickPlacement="Both" Minimum="1"/>
+
+        </StackPanel>
+
     </Grid>
 </Window>

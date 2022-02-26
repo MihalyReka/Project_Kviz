@@ -24,31 +24,40 @@ namespace ProjectKviz
         List<Kviz> kviz;
         List<string> tantargyak = new List<string>() { "töri", "matek" };
         List<string> tema = new List<string>();
-        
-        int pontok;
+
+        int pontok = 0;
         int i=0 ;
-        int sorSzam = 0;
+        int sorSzam=1;
+        
+        
+
 
 
         public MainWindow()
         {
             InitializeComponent();
             FajlBeolvasasa("KvizhezSzoveg.txt");
-           
+            
+
+
+            
         }
 
         private void Ellenorzes()
         {
+
             
-            
-            if (valaszA.IsChecked==true && valaszA.Content == kviz[i].Helyes)
-                pontok = pontok + 1;
+            if (valaszA.IsChecked==true && valaszA.Content == kviz[i].Helyes )
+                pontok=pontok+1;
             else if (valaszB.IsChecked == true && valaszB.Content == kviz[i].Helyes)
                 pontok = pontok + 1;
             else if (valaszC.IsChecked == true && valaszC.Content == kviz[i].Helyes)
                 pontok = pontok + 1;
             else if (valaszD.IsChecked == true && valaszD.Content == kviz[i].Helyes)
                 pontok = pontok + 1;
+
+
+
 
 
         }
@@ -62,8 +71,13 @@ namespace ProjectKviz
                 kviz.Add(new Kviz(s));
             }
             
-           
+            
             tantargyCB.ItemsSource = tantargyak;
+            sorszam.Content = sorSzam + ".";
+            valaszA.IsChecked = false;
+            valaszB.IsChecked = false;
+            valaszC.IsChecked = false;
+            valaszD.IsChecked = false;
             valaszA.IsEnabled = false;
             valaszB.IsEnabled = false;
             valaszC.IsEnabled = false;
@@ -86,7 +100,7 @@ namespace ProjectKviz
                 tema.Add(v.Tema);
             }
             List<string> toriTemak = new List<string>() { "vegyes","dátum" };
-            List<string> matekTemak = new List<string>() { "számelmélet", "fogalmak" };
+            List<string> matekTemak = new List<string>() { "számolás", "fogalmak" };
          
             
 
@@ -118,42 +132,86 @@ namespace ProjectKviz
         }
 
         private void tovabbGomb_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             if (sorSzam<10)
             {
                 sorSzam++;
             }
-            
-            sorszam.Content =sorSzam +".";
-            if (i%10+1<=10)
+            sorszam.Content = sorSzam + ".";
+            if (temakorCB.SelectedItem=="dátum")
+                {
+                    if (i<9)
+                    {
+                        i++;
+                    }
+                }
+            else if (temakorCB.SelectedItem == "vegyes")
             {
-                i++;
+                if (i < 19)
+                {
+                    i++;
+                }
             }
-            
-
+            else if (temakorCB.SelectedItem == "számolás")
+            {
+                if (i < 29)
+                {
+                    i++;
+                }
+            }
+            else if (temakorCB.SelectedItem == "fogalmak")
+            {
+                if ( i < 39)
+                {
+                    i++;
+                }
+            }
             kerdes.Content = kviz[i].Kerdes;
             valaszA.Content = kviz[i].ValaszA;
             valaszC.Content = kviz[i].ValaszC;
             valaszB.Content = kviz[i].ValaszB;
             valaszD.Content = kviz[i].ValaszD;
 
-
-
-
-        }
-
-        private void visszaGomb_Click(object sender, RoutedEventArgs e)
-        {
             
+            helyzet.Value = sorSzam;
+        }
+        private void visszaGomb_Click(object sender, RoutedEventArgs e)
+        {           
             if (sorSzam>1)
             {
                 sorSzam--;
             }
-            
             sorszam.Content = sorSzam + ".";
-            if (i>0)
+
+            
+            helyzet.Value = sorSzam;
+            if (temakorCB.SelectedItem == "dátum")
             {
-                i = i - 1;
+                if (i > 0 )
+                {
+                    i--;
+                }
+            }
+            else if (temakorCB.SelectedItem == "vegyes")
+            {
+                if (i > 10)
+                {
+                    i--;
+                }
+            }
+            else if (temakorCB.SelectedItem == "számolás")
+            {
+                if (i > 20)
+                {
+                    i--;
+                }
+            }
+            else if (temakorCB.SelectedItem == "fogalmak")
+            {
+                if (i > 30)
+                {
+                    i--;
+                }
             }
             kerdes.Content = kviz[i].Kerdes;
             valaszA.Content = kviz[i].ValaszA;
@@ -169,13 +227,15 @@ namespace ProjectKviz
             MessageBox.Show($"Elért pontszáma a 10-ből: {pontok} ");
             tantargyCB.IsEnabled = true;
             temakorCB.IsEnabled = true;
+            
+            
         }
 
         private void indit_Click(object sender, RoutedEventArgs e)
         {
-           
-            
 
+
+            
             valaszA.IsEnabled=true;
             valaszB.IsEnabled = true;
             valaszC.IsEnabled = true;
@@ -188,6 +248,11 @@ namespace ProjectKviz
             Ellenorzes();
 
             
+        }
+
+        private void helyzet_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }
