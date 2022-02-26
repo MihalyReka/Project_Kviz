@@ -103,10 +103,18 @@ namespace ProjectKviz
 
         private void TemakorCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string temakor = temakorCB.SelectedItem.ToString();
+            
             indit.IsEnabled = true;
-            
-            
+            string temakor = temakorCB.SelectedItem.ToString();
+            while (i < kviz.Count && kviz[i].Tema != temakor)
+                i++;
+            kerdes.Content = kviz[i].Kerdes;
+            valaszA.Content = kviz[i].ValaszA;
+            valaszC.Content = kviz[i].ValaszC;
+            valaszB.Content = kviz[i].ValaszB;
+            valaszD.Content = kviz[i].ValaszD;
+
+
         }
 
         private void tovabbGomb_Click(object sender, RoutedEventArgs e)
@@ -165,13 +173,7 @@ namespace ProjectKviz
 
         private void indit_Click(object sender, RoutedEventArgs e)
         {
-            while (i < kviz.Count && kviz[i].Tema != temakor)
-                i++;
-            kerdes.Content = kviz[i].Kerdes;
-            valaszA.Content = kviz[i].ValaszA;
-            valaszC.Content = kviz[i].ValaszC;
-            valaszB.Content = kviz[i].ValaszB;
-            valaszD.Content = kviz[i].ValaszD;
+           
             
 
             valaszA.IsEnabled=true;
