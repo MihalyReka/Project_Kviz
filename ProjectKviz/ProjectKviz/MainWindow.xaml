@@ -12,11 +12,12 @@
         <Label x:Name="sorszam" Content="1." HorizontalAlignment="Left" Margin="37,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="kerdes" Content="" HorizontalAlignment="Left" Margin="89,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.587"/>
         <RadioButton x:Name="valaszA" Content="" HorizontalAlignment="Left" Margin="89,154,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="valaszB" Content="" HorizontalAlignment="Right" Margin="0,157,266,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="valaszB" Content="" Margin="507,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.632,0.867" HorizontalAlignment="Left"/>
         <RadioButton x:Name="valaszC" Content="" HorizontalAlignment="Left" Margin="89,0,0,180" VerticalAlignment="Bottom"/>
-        <RadioButton x:Name="valaszD" Content="" Margin="0,0,266,177" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <RadioButton x:Name="valaszD" Content="" Margin="507,0,0,177" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         <Button x:Name="visszaGomb" Content="Vissza" HorizontalAlignment="Left" Margin="37,0,0,34" VerticalAlignment="Bottom" Width="75" Click="visszaGomb_Click"/>
         <Button x:Name="tovabbGomb" Content="Tovább" HorizontalAlignment="Right" Margin="0,0,125,39" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="2.472,2.09" Click="tovabbGomb_Click"/>
         <Button x:Name="kiertekeles" Content="Kiértékelés" HorizontalAlignment="Right" Margin="0,0,31,39" VerticalAlignment="Bottom" Width="75" Click="kiertekeles_Click"/>
+        <Button x:Name="indit" Content="Teszt indítása" HorizontalAlignment="Right" Margin="0,23,50,0" VerticalAlignment="Top" Width="103" Click="indit_Click"/>
     </Grid>
 </Window>

@@ -20,9 +20,9 @@ namespace ProjectKviz
         {
 
             var sorE = sor.Split(';');
-            Tantargy = sorE[0];
-            Tema= sorE[1];
-            Kerdes= sorE[2];
+            tantargy = sorE[0];
+            tema= sorE[1];
+            kerdes= sorE[2];
             valaszA = sorE[3];
             valaszB = sorE[4];
             valaszC = sorE[5];
