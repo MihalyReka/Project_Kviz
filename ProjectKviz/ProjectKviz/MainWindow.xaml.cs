@@ -22,47 +22,46 @@ namespace ProjectKviz
     public partial class MainWindow : Window
     {
         List<Kviz> kviz;
-        List<string> tantargyak = new List<string>() { "töri", "matek" };
+        
         List<string> tema = new List<string>();
-
-        int pontok = 0;
+        int pontok=0;
         int i=0 ;
         int sorSzam=1;
+        string[] valasz;
         
-        
-
-
 
         public MainWindow()
         {
             InitializeComponent();
             FajlBeolvasasa("KvizhezSzoveg.txt");
-            
-
-
-            
+            Ellenorzes();
+            if (valaszA.IsChecked==true)
+            {
+                valasz[i] = valaszA.Content.ToString();
+            }
+            else if (valaszB.IsChecked == true)
+            {
+                valasz[i] = valaszB.Content.ToString();
+            }
+            else if (valaszC.IsChecked == true)
+            {
+                valasz[i] = valaszC.Content.ToString();
+            }
+            else if (valaszD.IsChecked == true)
+            {
+                valasz[i] = valaszD.Content.ToString();
+            }
         }
-
         private void Ellenorzes()
         {
-
             
-            if (valaszA.IsChecked==true && valaszA.Content == kviz[i].Helyes )
-                pontok=pontok+1;
-            else if (valaszB.IsChecked == true && valaszB.Content == kviz[i].Helyes)
-                pontok = pontok + 1;
-            else if (valaszC.IsChecked == true && valaszC.Content == kviz[i].Helyes)
-                pontok = pontok + 1;
-            else if (valaszD.IsChecked == true && valaszD.Content == kviz[i].Helyes)
+            
+            
+            
+            if (valaszA.IsChecked == true && valaszA.Content == kviz[i].Helyes || valaszB.IsChecked == true && valaszB.Content == kviz[i].Helyes || valaszC.IsChecked == true && valaszC.Content == kviz[i].Helyes || valaszD.IsChecked == true && valaszD.Content == kviz[i].Helyes)
                 pontok = pontok + 1;
 
-
-
-
-
-        }
-
-
+        }   
         private void FajlBeolvasasa(string fajlNeve)
         {
             kviz = new List<Kviz>();
@@ -70,9 +69,9 @@ namespace ProjectKviz
             {
                 kviz.Add(new Kviz(s));
             }
-            
-            
+            List<string> tantargyak = new List<string>() { "töri", "matek" };
             tantargyCB.ItemsSource = tantargyak;
+            
             sorszam.Content = sorSzam + ".";
             valaszA.IsChecked = false;
             valaszB.IsChecked = false;
@@ -87,7 +86,6 @@ namespace ProjectKviz
             kiertekeles.IsEnabled = false;
             indit.IsEnabled = false;
         }
-
         private void tantargyCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
@@ -99,10 +97,8 @@ namespace ProjectKviz
             {
                 tema.Add(v.Tema);
             }
-            List<string> toriTemak = new List<string>() { "vegyes","dátum" };
+            List<string> toriTemak = new List<string>() { "vegyes", "dátum" };
             List<string> matekTemak = new List<string>() { "számolás", "fogalmak" };
-         
-            
 
             if (tantargy=="töri")
             {
@@ -112,9 +108,9 @@ namespace ProjectKviz
             {
                 temakorCB.ItemsSource = matekTemak;    
             }
+            
 
         }
-
         private void TemakorCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
@@ -122,22 +118,19 @@ namespace ProjectKviz
             string temakor = temakorCB.SelectedItem.ToString();
             while (i < kviz.Count && kviz[i].Tema != temakor)
                 i++;
-            kerdes.Content = kviz[i].Kerdes;
-            valaszA.Content = kviz[i].ValaszA;
-            valaszC.Content = kviz[i].ValaszC;
-            valaszB.Content = kviz[i].ValaszB;
-            valaszD.Content = kviz[i].ValaszD;
+            
 
 
         }
-
         private void tovabbGomb_Click(object sender, RoutedEventArgs e)
-        {            
+        {
+            
             if (sorSzam<10)
             {
                 sorSzam++;
             }
             sorszam.Content = sorSzam + ".";
+            helyzet.Value = sorSzam;
             if (temakorCB.SelectedItem=="dátum")
                 {
                     if (i<9)
@@ -171,9 +164,23 @@ namespace ProjectKviz
             valaszC.Content = kviz[i].ValaszC;
             valaszB.Content = kviz[i].ValaszB;
             valaszD.Content = kviz[i].ValaszD;
+            if (valaszA.Content == valasz[i])
+            {
+                valaszA.IsChecked = true;
+            }
+            else if (kviz[i].ValaszB == valasz[i])
+            {
+                valaszB.IsChecked = true;
+            }
+            else if (kviz[i].ValaszC == valasz[i])
+            {
+                valaszC.IsChecked = true;
+            }
+            else if (kviz[i].ValaszD == valasz[i])
+            {
+                valaszD.IsChecked = true;
+            }
 
-            
-            helyzet.Value = sorSzam;
         }
         private void visszaGomb_Click(object sender, RoutedEventArgs e)
         {           
@@ -218,19 +225,34 @@ namespace ProjectKviz
             valaszC.Content = kviz[i].ValaszC;
             valaszB.Content = kviz[i].ValaszB;
             valaszD.Content = kviz[i].ValaszD;
+            if (kviz[i].ValaszA == valasz[i])
+            {
+                valaszA.IsChecked = true;
+            }
+            else if (kviz[i].ValaszB == valasz[i])
+            {
+                valaszB.IsChecked = true;
+            }
+            else if (kviz[i].ValaszC == valasz[i])
+            {
+                valaszC.IsChecked = true;
+            }
+            else if (kviz[i].ValaszD == valasz[i])
+            {
+                valaszD.IsChecked = true;
+            }
+
 
         }
-
         private void kiertekeles_Click(object sender, RoutedEventArgs e)
         {
             Ellenorzes();
             MessageBox.Show($"Elért pontszáma a 10-ből: {pontok} ");
-            tantargyCB.IsEnabled = true;
-            temakorCB.IsEnabled = true;
+            
+            
             
             
         }
-
         private void indit_Click(object sender, RoutedEventArgs e)
         {
 
@@ -245,14 +267,21 @@ namespace ProjectKviz
             kiertekeles.IsEnabled = true;
             temakorCB.IsEnabled = false;
             tantargyCB.IsEnabled = false;
+            kerdes.Content = kviz[i].Kerdes;
+            valaszA.Content = kviz[i].ValaszA;
+            valaszC.Content = kviz[i].ValaszC;
+            valaszB.Content = kviz[i].ValaszB;
+            valaszD.Content = kviz[i].ValaszD;
             Ellenorzes();
 
             
         }
-
         private void helyzet_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            helyzet.Value = sorSzam;
+            sorszam.Content = sorSzam + ".";
         }
+
+       
     }
 }
