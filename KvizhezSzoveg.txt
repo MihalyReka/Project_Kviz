@@ -1,0 +1,40 @@
+töri;dátum;Mikor volt a mohácsi csata?;1520;1480;1526;1570;1526
+töri;dátum;Mikor fedezték fel Amerikát?;1450;1492;1420;1500;1492
+töri;dátum;Mikor szakad három felé Magyarország?;1526;1600;1540;1541;1541
+töri;dátum;Mikor kezdődött az I. világháború?;1900;1914;1918;1899;1914
+töri;dátum;Mikor ér véget az II. világháború?;1920;1914;1945;1939;1945
+töri;dátum;Mikor írták alá a trianoni békeszerződést?;1918;1920;1914;1919;1918
+töri;dátum;Mikor kötöték meg a Hármas szövetséget?;1900;1899;1880;1882;1882
+töri;dátum;Mikor kötöték meg az Entente cordiale-t?;1920;1904;1911;1909;1904
+töri;dátum;Mikor adták ki az Aranybullát?;1200;1220;1222;1221;1222
+töri;dátum;Mikor volt a Honfoglalás?;1000;974;765;895;895
+töri;vegyes;Ki fedezte fel Amerikát?;Kolumbusz Kristóf;Vasco da Gama;Amerigo Vespucci;John Cabot;Kolumbusz Kristóf
+töri;vegyes;Ki Amerika névadója?;Kolumbusz Kristóf;Vasco da Gama;Amerigo Vespucci;John Cabot;Amerigo Vespucci
+töri;vegyes;Ki volt az Magyarország első királya;Szent László;Szent István;Könyves Kálmán;I.András;Szent István
+töri;vegyes;A mohácsi csatában ki vezette a török seregeket?;Ali Csorbadzsi;I. Szulejmán;II. Szulejmán;Szapolyai János;I. Szulejmán
+töri;vegyes;Hol írták alá a trianoni békeszerződést?;Párizs;Budapest;Versailles;Bécs;Versailles
+töri;vegyes;Melyik ország a Hármas szövetség egyik tagja?;Franciaország;Oroszország;Anglia;Ukrajna;Osztrák-Magyar Monarchia;Osztrák-Magyar Monarchia
+töri;vegyes;Ki végezte ki a tizenkét aradi vértanut?;Haynau;Bach;I. Ferenc József;Görgei Artúr;Haynau
+töri;vegyes;Melyik ország az Antant egyik tagja?;Oroszország;Magyarország;Románia;Bulgária;Oroszország
+töri;vegyes;Hol ért véget az 1848-49-es magyar szabadságharc?;Pozsony;Világos;Budapest;Kecskemét;Világos
+töri;vegyes;Ki adta ki az Aranybullát?;II. András;Szent István;Géza fejedelem;I.Lajos;II. András
+matek;számolás;Mennyi 2+2?;3;0;4;2;4
+matek;számolás;Mennyi 2*2?;4;0;1;2;4
+matek;számolás;Mennyi 2-2?;0;6;4;2;0
+matek;számolás;Mennyi 2/2?;0;2;4;1;1
+matek;számolás;Mennyi 2+2-2?;6;3;2;4;2
+matek;számolás;Mennyi 2+2*2?;6;2;4;8;6
+matek;számolás;Mennyi 2+2/2?;3;4;5;1;3
+matek;számolás;Mennyi 2-2/2?;1;2;3;4;1
+matek;számolás;Mennyi 2*2-2?;4;5;2;6;2
+matek;számolás;Mennyi 2*2+2/2?;10;2;8;5;5
+matek;fogalmak;Mi nem igaz a négyzet?;Minden a négy oldala egyenlő hosszúságú;Szögei 90°-ak;Oldalai párhuzamosak;Belső szögeinek az összege 180°;Belső szögeinek az összege 180°
+matek;fogalmak;Hogyan nevezzük a koordináta rendszer két tengelyét?;a és b;x és a;x és y;b és y;x és y
+matek;fogalmak;Mi a vektor?;Irányítot egyenes;Egy vonal;Egy nyíl;Irányított egyenes;Irányított egyenes
+matek;fogalmak;Mi a paralelogramma?;Szemközti oldalai párhuzamosak egymással;Minden szöge derékszög;Minden oldala azonos hosszúságú;Átlói egymásra merőlegesek;Szemközti oldalai párhuzamosak egymással
+matek;fogalmak;Melyik a pitagorasz-tétel?;a*a+b=c*c;a*a+b=c;a*a+b*b=c*c;a*a+b*b=c;a*a+b*b=c*c
+matek;fogalmak;Mi a prímszám?;Csak két osztóval rendelkező szám;Több mint két osztóval rendelkező szám;1-gyel osztható számok;2-vel osztható számok;Csak két osztóval rendelkező szám
+matek;fogalmak;Mi sz összetett szám;Kétjegyű számok;Háromjegyű számok;Két osztóvel rendelkező számok;Több mint 2 osztóvel rendelkező számok;Több mint 2 osztóvel rendelkező számok
+matek;fogalmak;Mi az origo?;Két számtol egyenlő távolságra eső összeg;A koordináta rendszer két tengelyének metszete;A zérushely;Egy pont helyzete;A koordináta rendszer két tengelyének metszete
+matek;fogalmak;Hány átloja van a szabályos nyolcszögnek?;20;16;64;24;24
+matek;fogalmak;Mennyi a háromszög belső szögeinek az összege?;180°;90°;270°;360°;180°

@@ -27,7 +27,7 @@ namespace ProjectKviz
         int pontok=0;
         int i=0 ;
         int sorSzam=1;
-        string[] valasz;
+        
         
 
         public MainWindow()
@@ -35,22 +35,7 @@ namespace ProjectKviz
             InitializeComponent();
             FajlBeolvasasa("KvizhezSzoveg.txt");
             Ellenorzes();
-            if (valaszA.IsChecked==true)
-            {
-                valasz[i] = valaszA.Content.ToString();
-            }
-            else if (valaszB.IsChecked == true)
-            {
-                valasz[i] = valaszB.Content.ToString();
-            }
-            else if (valaszC.IsChecked == true)
-            {
-                valasz[i] = valaszC.Content.ToString();
-            }
-            else if (valaszD.IsChecked == true)
-            {
-                valasz[i] = valaszD.Content.ToString();
-            }
+            
         }
         private void Ellenorzes()
         {
@@ -164,23 +149,7 @@ namespace ProjectKviz
             valaszC.Content = kviz[i].ValaszC;
             valaszB.Content = kviz[i].ValaszB;
             valaszD.Content = kviz[i].ValaszD;
-            if (valaszA.Content == valasz[i])
-            {
-                valaszA.IsChecked = true;
-            }
-            else if (kviz[i].ValaszB == valasz[i])
-            {
-                valaszB.IsChecked = true;
-            }
-            else if (kviz[i].ValaszC == valasz[i])
-            {
-                valaszC.IsChecked = true;
-            }
-            else if (kviz[i].ValaszD == valasz[i])
-            {
-                valaszD.IsChecked = true;
-            }
-
+           
         }
         private void visszaGomb_Click(object sender, RoutedEventArgs e)
         {           
@@ -225,22 +194,7 @@ namespace ProjectKviz
             valaszC.Content = kviz[i].ValaszC;
             valaszB.Content = kviz[i].ValaszB;
             valaszD.Content = kviz[i].ValaszD;
-            if (kviz[i].ValaszA == valasz[i])
-            {
-                valaszA.IsChecked = true;
-            }
-            else if (kviz[i].ValaszB == valasz[i])
-            {
-                valaszB.IsChecked = true;
-            }
-            else if (kviz[i].ValaszC == valasz[i])
-            {
-                valaszC.IsChecked = true;
-            }
-            else if (kviz[i].ValaszD == valasz[i])
-            {
-                valaszD.IsChecked = true;
-            }
+           
 
 
         }
